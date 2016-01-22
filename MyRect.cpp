@@ -1,6 +1,7 @@
 #include "MyRect.h"
 #include <QKeyEvent>
 #include "Bullet.h"
+#include "Enemy.h"
 #include <QGraphicsScene>
 void MyRect::keyPressEvent(QKeyEvent *event)
 {
@@ -21,6 +22,14 @@ void MyRect::keyPressEvent(QKeyEvent *event)
         scene()->addItem(bullet);
     }
 }
+
+void MyRect::spawn()
+{
+    //create an enemy
+    Enemy * enemy=new Enemy();
+    scene()-> addItem(enemy);
+}
+
 //up and down commmands. kept for reference/if i want to modify the game
 
 /*else if (event -> key() == Qt::Key_Up)
