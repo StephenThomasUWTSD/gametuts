@@ -11,15 +11,15 @@ int main(int argc, char *argv[])
     //QGraphicsScene
     QGraphicsScene * scene = new QGraphicsScene();
     //QGraphicsItem (QGraphicsRectItem)
-    MyRect * rect = new MyRect();
-    rect->setRect(0,0, 100, 100);
+    MyRect * player = new MyRect();
+    player->setRect(0,0, 100, 100);
 
     //add item  to scene
-    scene ->addItem(rect);
+    scene ->addItem(player);
 
     //make the item focusssabble
-    rect->setFlag(QGraphicsItem::ItemIsFocusable);
-    rect ->setFocus();
+    player->setFlag(QGraphicsItem::ItemIsFocusable);
+    player->setFocus();
 
     //add a view into the scene.
     QGraphicsView * view = new QGraphicsView(scene);
