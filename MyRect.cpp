@@ -27,3 +27,4 @@ void MyRect::keyPressEvent(QKeyEvent *event)
         scene()->addItem(bullet);
     }
 }
+//comment
