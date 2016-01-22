@@ -3,6 +3,8 @@
 #include "MyRect.h"
 #include <QGraphicsView>
 
+//unnecessary comment...
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
