@@ -3,6 +3,9 @@
 #include <QTimer>
 #include <stdlib.h>
 #include <QList>
+#include "Game.h"
+extern Game * game;
+
 Enemy::Enemy()
 {
 
@@ -23,8 +26,11 @@ void Enemy::move()
     //move the enemy down
     setPos(x(),y()+5);
 
-    if(pos().y()+rect().height() < 0)
+    if(pos().y()+rect().height() > 600)
     {
+        //decrease health
+        game->health->decrease();
+
         scene()->removeItem(this);
         delete this;
     }
