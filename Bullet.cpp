@@ -4,6 +4,10 @@
 #include <QTimer>
 #include <QList>
 #include <typeinfo>
+#include "Game.h"
+
+extern Game * game; //there is an external global object called game: type pointer
+
 Bullet::Bullet()
 {
     //drew the rect
@@ -26,6 +30,8 @@ void Bullet::move()
     {
         if(typeid(*(colliding_items[i])) == typeid(Enemy))
         {
+            //increase the score
+            game->score->increase();
             scene()->removeItem(colliding_items[i]);
             scene()->removeItem(this);
             //free memory
