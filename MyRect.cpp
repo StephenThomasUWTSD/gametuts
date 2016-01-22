@@ -12,14 +12,7 @@ void MyRect::keyPressEvent(QKeyEvent *event)
     {
         setPos(x() +10, y());
     }
-    else if (event -> key() == Qt::Key_Up)
-    {
-        setPos(x(), y() -10);
-    }
-    else if (event -> key() == Qt::Key_Down)
-    {
-        setPos(x(), y()+10);
-    }
+
     else if (event->key()== Qt::Key_Space)
     {
         Bullet * bullet = new Bullet();
@@ -27,4 +20,14 @@ void MyRect::keyPressEvent(QKeyEvent *event)
         scene()->addItem(bullet);
     }
 }
-//comment
+//up and down commmands. kept for reference/if i want to modify the game
+
+/*else if (event -> key() == Qt::Key_Up)
+{
+    setPos(x(), y() -10);
+}
+else if (event -> key() == Qt::Key_Down)
+{
+    setPos(x(), y()+10);
+}
+*/
